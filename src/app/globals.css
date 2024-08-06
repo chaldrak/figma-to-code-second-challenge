@@ -9,7 +9,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --color-outline: #1d1d1d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,12 +29,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.text-outline {
-  text-shadow:
-    -1px -1px 0 var(--color-outline),
-    1px -1px 0 var(--color-outline),
-    -1px 1px 0 var(--color-outline),
-    1px 1px 0 var(--color-outline);
 }

@@ -19,9 +19,9 @@ const Header = () => {
         ))}
       </ul>
 
-      <div className="text-white">
-        <h3 className="font-chillax text-outline text-3xl font-semibold uppercase text-current">Ballamas</h3>
-      </div>
+      <Link href="/" className="text-white">
+        <h3 className="font-chillax text-shadow-outline text-3xl font-semibold uppercase text-current">Ballamas</h3>
+      </Link>
 
       <ul className="flex items-center gap-[18px]">
         {headerMenu.slice(4, 6).map((item, idx) => (

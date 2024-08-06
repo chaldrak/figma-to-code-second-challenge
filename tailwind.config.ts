@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
 
 const config: Config = {
   content: [
@@ -21,16 +22,19 @@ const config: Config = {
           100: "#E5E5E5",
           200: "#C3C3C3",
           300: "#7E7E7E",
-          400: "#E6E6E6",
-          500: "#D9D9D9",
-          600: "#C9C9C9",
-          700: "#BCBCBC",
-          800: "#A9A9A9",
           900: "#1D1D1D",
         },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-shadow-outline": {
+          textShadow: "0 1px 0 #1D1D1D, 1px 0 0 #1D1D1D, 0 -1px 0 #1D1D1D, -1px 0 0 #1D1D1D",
+        },
+      })
+    }),
+  ],
 }
 export default config
