@@ -1,5 +1,7 @@
 import Header from "@/components/header"
 import TopNav from "@/components/header/TopNav"
+import HeroSection from "@/components/home/HeroSection"
+import LatestTrends from "@/components/home/LatestTrends"
 
 export default function Home() {
   return (
@@ -8,17 +10,10 @@ export default function Home() {
         <TopNav />
         <Header />
       </div>
-      <section className="mx-auto max-w-7xl">
-        {/* {Array(100)
-          .fill(0)
-          .map((_, idx) => (
-            <p key={idx} className="text-gray-900">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, ex veritatis? Repellendus, provident
-              voluptate eveniet doloremque ducimus ad ullam, dicta necessitatibus odio, perferendis placeat. Qui iusto
-              tempora eos facere animi? <br />
-            </p>
-          ))} */}
-      </section>
+      <div className="mx-auto max-w-7xl">
+        <HeroSection />
+        <LatestTrends />
+      </div>
     </main>
   )
 }
