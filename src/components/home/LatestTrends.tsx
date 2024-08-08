@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 
 import Categories from "./Categories"
+import ListTrends from "./ListTrends"
 
 const LatestTrends = () => {
   const [category, setCategory] = useState("")
@@ -14,7 +15,7 @@ const LatestTrends = () => {
 
       <Categories category={category} setCategory={setCategory} />
 
-      <div className="mb-10 h-96 w-full border"></div>
+      <ListTrends />
     </section>
   )
 }

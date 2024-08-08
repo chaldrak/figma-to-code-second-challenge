@@ -30,8 +30,20 @@ const config: Config = {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
-        ".text-shadow-outline": {
+        ".text-shadow-outline-black": {
           textShadow: "0 1px 0 #1D1D1D, 1px 0 0 #1D1D1D, 0 -1px 0 #1D1D1D, -1px 0 0 #1D1D1D",
+        },
+        ".text-shadow-outline-white": {
+          textShadow: "0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff",
+        },
+        ".hide-scrollbar": {
+          /* For WebKit (Chrome, Safari, etc) */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          /* For Firefox */
+          "-ms-overflow-style": "none" /* IE and Edge */,
+          "scrollbar-width": "none" /* Firefox */,
         },
       })
     }),

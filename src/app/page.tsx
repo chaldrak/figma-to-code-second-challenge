@@ -1,19 +1,18 @@
-import Header from "@/components/header"
-import TopNav from "@/components/header/TopNav"
 import HeroSection from "@/components/home/HeroSection"
 import LatestTrends from "@/components/home/LatestTrends"
+import OurCollection from "@/components/home/OurCollection"
+import HeaderLayout from "@/components/layouts/HeaderLayout"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="sticky top-0 z-50">
-        <TopNav />
-        <Header />
-      </div>
-      <div className="mx-auto max-w-7xl">
-        <HeroSection />
-        <LatestTrends />
-      </div>
+      <HeaderLayout>
+        <div className="mx-auto mb-24 h-fit max-w-7xl bg-white">
+          <HeroSection />
+          <LatestTrends />
+          <OurCollection />
+        </div>
+      </HeaderLayout>
     </main>
   )
 }

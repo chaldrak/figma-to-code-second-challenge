@@ -20,7 +20,9 @@ const Header = () => {
       </ul>
 
       <Link href="/" className="text-white">
-        <h3 className="font-chillax text-shadow-outline text-3xl font-semibold uppercase text-current">Ballamas</h3>
+        <h3 className="text-shadow-outline-black font-chillax text-3xl font-semibold uppercase text-current">
+          Ballamas
+        </h3>
       </Link>
 
       <ul className="flex items-center gap-[18px]">
