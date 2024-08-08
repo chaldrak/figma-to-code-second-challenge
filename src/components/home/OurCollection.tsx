@@ -40,7 +40,7 @@ const OurCollection = () => {
           <div className="relative col-span-2 flex h-[446px] w-full items-center justify-center overflow-hidden rounded-[32px] bg-gray-200 bg-[url('https://started-bucket.s3.us-east-2.amazonaws.com/figma-to-code/challenge-2/abraham-george.png')] bg-cover bg-center bg-no-repeat">
             <div className="absolute inset-0 z-0 bg-black/20" />
             <div className="relative z-10">
-              <h3 className="text-shadow-outline-white bg-clip-text text-center font-chillax text-5xl font-bold uppercase text-black/50">
+              <h3 className="bg-clip-text text-center font-chillax text-5xl font-bold uppercase text-black/50 text-shadow-outline-white">
                 Classic men
               </h3>
               <p className="text-center text-lg text-white">We’re changing the way things get made</p>

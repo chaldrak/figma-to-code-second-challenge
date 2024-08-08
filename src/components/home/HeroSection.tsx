@@ -14,17 +14,17 @@ const HeroSection = () => {
         <div className="h-[0.5px] w-[66px] bg-gray-200" />
       </div>
 
-      <h3 className="font-chillax relative z-10 mb-4 max-w-5xl py-4 text-center text-5xl font-black">
+      <h3 className="relative z-10 mb-4 max-w-5xl py-4 text-center font-chillax text-5xl font-black">
         DISCOVER THE LATEST FASHION TRENDS HERE
       </h3>
 
-      <p className="font-archivo relative z-10 mb-[52px] max-w-2xl text-center text-base">
+      <p className="relative z-10 mb-[52px] max-w-2xl text-center font-archivo text-base">
         Discover a world of fashion with our meticulously curated outfits. Shop now to update your wardrobe with chic
         and stylish outfits.
       </p>
 
       <div className="relative z-10 flex items-center">
-        <button className="font-archivo rounded-full bg-white px-5 py-3 text-sm font-semibold text-gray-900">
+        <button className="rounded-full bg-white px-5 py-3 font-archivo text-sm font-semibold text-gray-900">
           Start shopping
         </button>
         <button className="rounded-full bg-white p-3">

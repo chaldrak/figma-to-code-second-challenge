@@ -20,7 +20,7 @@ const Header = () => {
       </ul>
 
       <Link href="/" className="text-white">
-        <h3 className="text-shadow-outline-black font-chillax text-3xl font-semibold uppercase text-current">
+        <h3 className="font-chillax text-3xl font-semibold uppercase text-current text-shadow-outline-black">
           Ballamas
         </h3>
       </Link>

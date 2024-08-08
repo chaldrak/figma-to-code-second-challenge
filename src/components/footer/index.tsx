@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex items-start justify-between">
           <div className="w-1/3">
             <Link href="/" className="text-black">
-              <h3 className="text-shadow-outline-white font-chillax text-3xl font-semibold uppercase text-current">
+              <h3 className="font-chillax text-3xl font-semibold uppercase text-current text-shadow-outline-white">
                 Ballamas
               </h3>
             </Link>
