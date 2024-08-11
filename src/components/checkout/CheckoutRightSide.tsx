@@ -1,13 +1,20 @@
-import React from "react"
+"use client"
 
+import React, { useState } from "react"
+
+import ArrowRightIcon from "@/assets/icons/arrow-right.svg"
 import LockIcon from "@/assets/icons/lock.svg"
+import { payments } from "@/constants/methods"
 
+import BaseButton from "../common/BaseButton"
 import BaseInput from "../common/BaseInput"
+import BaseRadio from "../common/BaseRadio"
 import BaseSelect from "../common/BaseSelect"
 
 const CheckoutRightSide = () => {
+  const [method, setMethod] = useState(payments.at(0)?.label)
   return (
-    <div className="h-fit w-[488px]">
+    <form className="h-fit w-[488px]">
       <div>
         <h3 className="text-sm font-semibold text-gray-900">Payment details</h3>
         <p className="text-xs font-medium text-gray-300">Complete your purchase by providing your payment details.</p>
@@ -30,18 +37,16 @@ const CheckoutRightSide = () => {
       <div className="mt-6">
         <h3 className="text-sm font-semibold text-gray-900">Select payment method</h3>
         <div className="mt-3 grid grid-cols-2 gap-5">
-          <div className="boder-gray-300 h-[76px] w-full rounded-xl border px-3 py-4 peer-checked:border-gray-900">
-            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" className="peer" />
-            <label htmlFor="creditCard" className="text-xs font-medium text-gray-900">
-              Debit / Credit Card
-            </label>
-          </div>
-          <div className="boder-gray-300 h-[76px] w-full rounded-xl border">
-            <input type="radio" id="paypal" name="paymentMethod" value="paypal" className="mr-2" />
-            <label htmlFor="paypal" className="text-sm font-medium text-gray-900">
-              PayPal
-            </label>
-          </div>
+          {payments.map((item) => (
+            <BaseRadio
+              mode="payment"
+              icon={item.icon}
+              key={item.label}
+              label={item.label}
+              value={method as string}
+              onChange={setMethod}
+            />
+          ))}
         </div>
 
         <div className="mt-[22px] grid w-full grid-cols-2 gap-x-3 gap-y-2">
@@ -49,8 +54,23 @@ const CheckoutRightSide = () => {
           <BaseInput placeholder="Expiration Date (MM/YY)" type="text" />
           <BaseInput placeholder="Security code" type="text" />
         </div>
+
+        <div className="mt-3 flex items-center gap-1">
+          <input type="checkbox" name="checkbox" id="checkbox" className="size-[18px] checked:bg-gray-600" />
+          <label htmlFor="checkbox" className="text-xs text-gray-900">
+            Use shipping address as billing address
+          </label>
+        </div>
       </div>
-    </div>
+
+      <div className="mt-6 px-[86px]">
+        <BaseButton
+          title="Pay $524.00"
+          rightIcon={ArrowRightIcon}
+          className="flex w-full bg-gray-900 py-3 text-white"
+        />
+      </div>
+    </form>
   )
 }
 

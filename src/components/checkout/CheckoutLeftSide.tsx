@@ -2,6 +2,8 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
+import BaseButton from "../common/BaseButton"
+
 const CheckoutLeftSide = () => {
   return (
     <div className="w-[600px]">
@@ -50,9 +52,7 @@ const CheckoutLeftSide = () => {
             placeholder="Add discount code"
             className="placeholder:text-medium w-1/2 rounded-full border border-gray-900 bg-white p-[14px] placeholder:text-xs placeholder:text-gray-900"
           />
-          <button className="ml-2 w-fit rounded-full border bg-gray-900 px-5 py-[14px] font-semibold text-white">
-            Apply
-          </button>
+          <BaseButton title="Apply" className="ml-2 inline-block w-fit bg-gray-900 px-5 py-[14px] text-white" />
           <p className="mt-2 text-xs font-medium text-gray-300">
             <Link href="#" className="font-semibold text-gray-600">
               New customer? <span className="underline">Signup</span>
