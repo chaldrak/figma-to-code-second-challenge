@@ -1,6 +1,11 @@
+"use client"
+
 import React from "react"
+import { useRouter } from "next/navigation"
 
 const BasketOrder = () => {
+  const router = useRouter()
+
   return (
     <div className="h-fit w-1/3 rounded-xl border border-gray-100 px-6 py-4">
       <h3 className="text-lg font-semibold text-gray-900">Order summary</h3>
@@ -21,7 +26,11 @@ const BasketOrder = () => {
         <span className="text-base font-extrabold">$524.00</span>
       </div>
 
-      <button className="mt-2 w-full rounded-full bg-gray-900 py-3 text-sm font-semibold text-white">
+      <button
+        className="mt-2 w-full rounded-full bg-gray-900 py-3 text-sm font-semibold text-white"
+        type="button"
+        onClick={() => router.push("/checkout")}
+      >
         Checkout now
       </button>
     </div>
