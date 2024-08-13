@@ -15,10 +15,8 @@ const Header = () => {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    // document.body.style.overflow = open ? "hidden" : "auto"
+    document.body.style.overflow = open ? "hidden" : "auto"
   }, [open])
-
-  console.log(open)
 
   return (
     <nav className="relative z-50 h-[76px] bg-white">
@@ -112,7 +110,7 @@ const Header = () => {
       <div
         className={clsx(
           "absolute left-0 top-[76px] flex w-full flex-col items-center bg-white py-[18px] text-center transition-all ease-in-out",
-          open ? "min-h-screen lg:hidden" : "h-0"
+          open ? "min-h-screen lg:hidden" : "hidden h-0"
         )}
       >
         <ul className="flex flex-col justify-center space-y-[18px]">
