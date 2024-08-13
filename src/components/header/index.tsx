@@ -74,14 +74,20 @@ const Header = () => {
               width={500}
               height={500}
               alt="hamburger top"
-              className={clsx("h1 w-8 origin-center object-cover transition", open ? "rotate-custom" : "rotate-0")}
+              className={clsx(
+                "h1 w-8 origin-center object-cover transition",
+                open ? "translate-y-2 rotate-custom" : "rotate-0"
+              )}
             />
             <Image
               src={HamburgerRow}
               width={500}
               height={500}
               alt="hamburger top"
-              className={clsx("h1 w-8 origin-center object-cover transition", open ? "-rotate-custom" : "rotate-0")}
+              className={clsx(
+                "h1 w-8 origin-center object-cover transition",
+                open ? "-translate-y-1 -rotate-custom" : "rotate-0"
+              )}
             />
           </button>
 
@@ -103,14 +109,14 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          {/* <div className="absolute left-0 top-[76px] z-50 mx-5 w-full border-t border-gray-100 md:mx-[46px] lg:mx-auto" /> */}
         </div>
       </div>
+
       {/* Menu mobile */}
       <div
         className={clsx(
           "absolute left-0 top-[76px] flex w-full flex-col items-center bg-white py-[18px] text-center transition-all ease-in-out",
-          open ? "min-h-screen lg:hidden" : "hidden h-0"
+          open ? "min-h-screen lg:hidden" : "hidden"
         )}
       >
         <ul className="flex flex-col justify-center space-y-[18px]">
