@@ -10,7 +10,7 @@ const CardTrend = ({ className }: { className?: string }) => {
   const router = useRouter()
   return (
     <div className={clsx("group h-fit w-full cursor-pointer", className)}>
-      <div className="bg-gray-3 00 relative h-[405px] w-full overflow-hidden rounded-[32px]">
+      <div className="relative h-[405px] w-full overflow-hidden rounded-[32px] bg-gray-300">
         <Image
           src="https://started-bucket.s3.us-east-2.amazonaws.com/figma-to-code/challenge-2/M%2BNSW%2BSW%2BAIR%2BCREW%2BFLC%2BBB.png"
           width={500}
@@ -35,8 +35,8 @@ const CardTrend = ({ className }: { className?: string }) => {
           </button>
         </div>
       </div>
-      <h3 className="mt-4 text-3xl font-semibold uppercase text-gray-900">Summer shirt</h3>
-      <p className="mt-1 text-2xl font-semibold text-gray-300">$99</p>
+      <h3 className="mt-4 text-2xl font-semibold uppercase text-gray-900 lg:text-3xl">Summer shirt</h3>
+      <p className="mt-1 text-xl font-semibold text-gray-300 lg:text-2xl">$99</p>
     </div>
   )
 }

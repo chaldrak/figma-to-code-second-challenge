@@ -7,7 +7,7 @@ const BasketOrder = () => {
   const router = useRouter()
 
   return (
-    <div className="h-fit w-1/3 rounded-xl border border-gray-100 px-6 py-4">
+    <div className="mx-auto h-fit w-full rounded-xl border border-gray-100 px-6 py-4 md:w-[374px] lg:w-1/3">
       <h3 className="text-lg font-semibold text-gray-900">Order summary</h3>
 
       <div className="mt-4 space-y-1 border-b border-gray-100 pb-3 text-sm font-medium text-gray-300">

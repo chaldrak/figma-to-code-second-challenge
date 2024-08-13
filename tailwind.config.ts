@@ -25,6 +25,9 @@ const config: Config = {
           900: "#1D1D1D",
         },
       },
+      rotate: {
+        custom: "24deg",
+      },
     },
   },
   plugins: [

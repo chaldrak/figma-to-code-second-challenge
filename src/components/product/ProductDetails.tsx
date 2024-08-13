@@ -2,7 +2,11 @@
 
 import React, { useState } from "react"
 import Image from "next/image"
-import clsx from "clsx"
+
+import BaseButton from "../common/BaseButton"
+
+import ButtonColor from "./ButtonColor"
+import ButtonSize from "./ButtonSize"
 
 const colors = [
   {
@@ -23,6 +27,8 @@ const colors = [
   },
 ]
 
+export type ColorType = (typeof colors)[0]
+
 const ProductDetails = () => {
   const [color, setColor] = useState<{
     label: string
@@ -32,8 +38,8 @@ const ProductDetails = () => {
   const [size, setSize] = useState("xs")
 
   return (
-    <section className="grid grid-cols-2 gap-11">
-      <div className="h-[600px] w-full overflow-hidden rounded-[32px]">
+    <section className="grid grid-cols-1 gap-11 lg:grid-cols-2">
+      <div className="aspect-square w-full overflow-hidden rounded-[32px] bg-gray-300">
         <Image
           src="https://started-bucket.s3.us-east-2.amazonaws.com/figma-to-code/challenge-2/Argentina_1994_Away_Jersey_Blue_IS0266_HM1.png"
           width={500}
@@ -44,27 +50,15 @@ const ProductDetails = () => {
       </div>
 
       <div className="size-full space-y-5 text-gray-900">
-        <h3 className="font-chillax text-5xl font-semibold">Badacore Tshirt</h3>
+        <h3 className="font-chillax text-3xl font-semibold md:text-5xl">Badacore Tshirt</h3>
 
-        <p className="text-4xl font-semibold">CAD $80 </p>
+        <p className="text-2xl font-semibold md:text-4xl">CAD $80 </p>
 
         <div>
-          <p className="text-3xl font-medium">Color:Green</p>
+          <p className="text-xl font-medium md:text-3xl">Color:{color.label}</p>
           <div className="mt-[14px] space-x-3">
             {colors.map((item, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => setColor(item)}
-                className={clsx(
-                  "size-7 rounded-full transition-transform",
-                  color?.code === item.code ? `scale-75` : "scale-100"
-                )}
-                style={{
-                  backgroundColor: item.code,
-                  boxShadow: color?.code === item.code ? `0px 0px 5px ${item.code}` : "",
-                }}
-              ></button>
+              <ButtonColor color={color} item={item} key={idx} setColor={setColor} />
             ))}
           </div>
         </div>
@@ -73,33 +67,28 @@ const ProductDetails = () => {
           <h3 className="text-3xl font-medium">Size:</h3>
           <div className="mt-[14px] space-x-3">
             {["xs", "s", "m", "l", "xl"].map((item, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => setSize(item)}
-                className={clsx(
-                  "h-[50px] w-[73px] rounded-full border border-gray-900 text-2xl font-medium uppercase transition-colors hover:bg-gray-900 hover:text-white",
-                  item === size ? "bg-gray-900 text-white" : ""
-                )}
-              >
-                {item}
-              </button>
+              <ButtonSize item={item} setSize={setSize} size={size} key={idx} />
             ))}
           </div>
         </div>
 
         <div className="flex items-center gap-[14px]">
-          <button className="w-full rounded-full bg-gray-900 py-6 text-sm font-semibold uppercase text-white hover:bg-black/80">
-            Buy now
-          </button>
-          <button className="w-full rounded-full border border-gray-900 bg-white py-[22px] text-sm font-semibold uppercase text-gray-900 hover:bg-gray-900 hover:text-white">
-            Add to cart
-          </button>
+          <BaseButton
+            submit={() => null}
+            title="Buy now"
+            className="w-full bg-gray-900 py-3 text-sm font-semibold uppercase text-white hover:bg-black/80 md:py-6"
+          />
+
+          <BaseButton
+            submit={() => null}
+            title="Add to cart"
+            className="w-full border border-gray-900 bg-white py-3 text-sm font-semibold uppercase text-gray-900 hover:bg-gray-900 hover:text-white md:py-[22px]"
+          />
         </div>
 
         <div>
-          <h3 className="font-chillax text-3xl font-medium">Description</h3>
-          <p className="mt-[14px] text-lg text-gray-300">
+          <h3 className="font-chillax text-2xl font-medium md:text-3xl">Description</h3>
+          <p className="mt-[14px] text-sm text-gray-300 md:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
             odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             Curabitur tempus urna at turpis condimentum lobortis.

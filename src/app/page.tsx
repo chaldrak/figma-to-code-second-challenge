@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <HeaderLayout>
-        <div className="mx-auto mb-24 h-fit max-w-7xl bg-white">
+        <div className="mx-5 mb-24 h-fit max-w-7xl bg-white md:mx-[46px] lg:mx-auto">
           <HeroSection />
           <LatestTrends />
           <OurCollection />

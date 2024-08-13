@@ -8,9 +8,9 @@ const CheckoutPage = () => {
   return (
     <main className="min-h-screen bg-white">
       <HeaderLayout>
-        <div className="mx-auto max-w-7xl pb-[104px] pt-[62px]">
-          <h3 className="mb-5 font-chillax text-2xl font-semibold text-gray-900">Checkout</h3>
-          <div className="flex size-full items-start justify-between gap-10">
+        <div className="mx-5 max-w-7xl pb-[104px] pt-[62px] md:mx-[46px] lg:mx-auto">
+          <h3 className="mb-5 font-chillax text-lg font-semibold text-gray-900 md:text-2xl">Checkout</h3>
+          <div className="flex size-full flex-col items-start justify-between gap-10 lg:flex-row">
             <CheckoutLeftSide />
             <CheckoutRightSide />
           </div>

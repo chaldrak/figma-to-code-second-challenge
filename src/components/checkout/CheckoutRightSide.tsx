@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import { useRouter } from "next/navigation"
 
 import ArrowRightIcon from "@/assets/icons/arrow-right.svg"
 import LockIcon from "@/assets/icons/lock.svg"
@@ -13,8 +14,19 @@ import BaseSelect from "../common/BaseSelect"
 
 const CheckoutRightSide = () => {
   const [method, setMethod] = useState(payments.at(0)?.label)
+  const router = useRouter()
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = () => {
+    setLoading(true)
+    setTimeout(() => {
+      router.push("/confirm-order")
+      setLoading(false)
+    }, 2000)
+  }
+
   return (
-    <form className="h-fit w-[488px]">
+    <form className="h-fit w-full lg:w-[488px]">
       <div>
         <h3 className="text-sm font-semibold text-gray-900">Payment details</h3>
         <p className="text-xs font-medium text-gray-300">Complete your purchase by providing your payment details.</p>
@@ -22,7 +34,7 @@ const CheckoutRightSide = () => {
 
       <div className="mt-4">
         <h3 className="text-sm font-semibold text-gray-900">Shipping address</h3>
-        <div className="mt-3 grid w-full grid-cols-2 gap-x-3 gap-y-2">
+        <div className="mt-3 grid w-full grid-cols-1 gap-x-3 gap-y-2 md:grid-cols-2">
           <BaseInput label="First name" placeholder="Enter your first name" type="text" />
           <BaseInput label="Last name" placeholder="Enter your last name" type="text" />
           <BaseInput label="Email address" placeholder="Enter your email address" type="text" />
@@ -49,8 +61,8 @@ const CheckoutRightSide = () => {
           ))}
         </div>
 
-        <div className="mt-[22px] grid w-full grid-cols-2 gap-x-3 gap-y-2">
-          <BaseInput placeholder="Card number" type="text" rightIcon={LockIcon} className="col-span-2" />
+        <div className="mt-[22px] grid w-full grid-cols-1 gap-x-3 gap-y-2 md:grid-cols-2">
+          <BaseInput placeholder="Card number" type="text" rightIcon={LockIcon} className="md:col-span-2" />
           <BaseInput placeholder="Expiration Date (MM/YY)" type="text" />
           <BaseInput placeholder="Security code" type="text" />
         </div>
@@ -63,11 +75,13 @@ const CheckoutRightSide = () => {
         </div>
       </div>
 
-      <div className="mt-6 px-[86px]">
+      <div className="mt-6 px-0 md:px-44 lg:px-[86px]">
         <BaseButton
           title="Pay $524.00"
           rightIcon={ArrowRightIcon}
-          className="flex w-full bg-gray-900 py-3 text-white"
+          className="flex w-full bg-gray-900 py-3 text-sm font-semibold text-white"
+          loading={loading}
+          submit={handleSubmit}
         />
       </div>
     </form>

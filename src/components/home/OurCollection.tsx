@@ -10,15 +10,17 @@ const OurCollection = () => {
   const router = useRouter()
   return (
     <section className="mt-[72px]">
-      <h3 className="text-center font-chillax text-4xl font-semibold uppercase text-gray-900">OUR COLLECTION</h3>
+      <h3 className="pb-1 text-center font-chillax text-2xl font-semibold uppercase text-gray-900 md:text-3xl lg:text-4xl">
+        OUR COLLECTION
+      </h3>
 
-      <p className="text-center text-lg font-medium text-gray-300">
+      <p className="text-center text-sm font-medium text-gray-300 md:text-base lg:text-lg">
         Our latest collection, where classic and contemporary styles converge in perfect harmony.
       </p>
 
-      <div className="mt-9 w-full px-[102px]">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="relative h-[446px] w-full overflow-hidden rounded-[32px] bg-gray-200">
+      <div className="mt-9 w-full lg:px-[102px]">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="relative order-last h-[446px] w-full overflow-hidden rounded-[32px] bg-gray-200 md:order-first">
             <Image
               src="https://started-bucket.s3.us-east-2.amazonaws.com/figma-to-code/challenge-2/tech-mens-fleece-shack.png"
               alt="Techs men fleece"
@@ -37,13 +39,13 @@ const OurCollection = () => {
               </button>
             </div>
           </div>
-          <div className="relative col-span-2 flex h-[446px] w-full items-center justify-center overflow-hidden rounded-[32px] bg-gray-200 bg-[url('https://started-bucket.s3.us-east-2.amazonaws.com/figma-to-code/challenge-2/abraham-george.png')] bg-cover bg-center bg-no-repeat">
+          <div className="relative flex h-[446px] w-full items-center justify-center overflow-hidden rounded-[32px] bg-gray-200 bg-[url('https://started-bucket.s3.us-east-2.amazonaws.com/figma-to-code/challenge-2/abraham-george.png')] bg-cover bg-center bg-no-repeat lg:col-span-2">
             <div className="absolute inset-0 z-0 bg-black/20" />
             <div className="relative z-10">
-              <h3 className="bg-clip-text text-center font-chillax text-5xl font-bold uppercase text-black/50 text-shadow-outline-white">
+              <h3 className="bg-clip-text text-center font-chillax text-3xl font-bold uppercase text-black/50 text-shadow-outline-white lg:text-5xl">
                 Classic men
               </h3>
-              <p className="text-center text-lg text-white">We’re changing the way things get made</p>
+              <p className="text-center text-sm text-white lg:text-lg">We’re changing the way things get made</p>
             </div>
           </div>
         </div>

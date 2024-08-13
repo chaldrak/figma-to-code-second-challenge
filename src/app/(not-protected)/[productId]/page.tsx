@@ -8,7 +8,7 @@ const ProductPage = () => {
   return (
     <main className="min-h-screen bg-white">
       <HeaderLayout>
-        <div className="mx-auto mb-24 mt-[76px] max-w-7xl">
+        <div className="mx-5 mb-24 mt-[76px] max-w-7xl md:mx-[46px] lg:mx-auto">
           <ProductDetails />
           <ListProducts />
         </div>

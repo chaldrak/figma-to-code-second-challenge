@@ -12,19 +12,19 @@ type ICategoriesProps = {
 
 const Categories = ({ category, setCategory }: ICategoriesProps) => {
   return (
-    <div className="mb-9 w-full space-x-[10px] text-center">
+    <div className="mb-9 w-full space-y-[10px] text-left md:text-center">
       {categories.map((item, idx) => (
         <button
           key={idx}
           className={clsx(
-            "space-x-2 rounded-full border border-gray-900 px-[14px] py-[10px] text-base font-medium transition-colors duration-500",
+            "mr-[10px] space-x-2 rounded-full border border-gray-900 px-[14px] py-[10px] font-medium transition-colors duration-500",
             item.value === category ? "bg-gray-900 text-white" : "bg-white hover:bg-gray-900 hover:text-white"
           )}
           type="button"
           onClick={() => setCategory(item.value)}
         >
-          <span className="text-xl">{item.label}</span>
-          <span className="text-base">{item.count}</span>
+          <span className="text-sm md:text-lg lg:text-xl">{item.label}</span>
+          <span className="text-xs md:text-base">{item.count}</span>
         </button>
       ))}
     </div>
