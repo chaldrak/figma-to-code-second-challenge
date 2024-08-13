@@ -2,12 +2,10 @@
 
 import React from "react"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 
 import ArrowIcon from "@/assets/icons/arrow.svg"
 
 const OurCollection = () => {
-  const router = useRouter()
   return (
     <section className="mt-[72px]">
       <h3 className="pb-1 text-center font-chillax text-2xl font-semibold uppercase text-gray-900 md:text-3xl lg:text-4xl">
@@ -30,10 +28,7 @@ const OurCollection = () => {
             />
             <div className="absolute inset-0 z-0 bg-black/20" />
             <div className="absolute bottom-6 z-10 w-full text-center">
-              <button
-                className="mx-auto flex items-center gap-[6px] rounded-full bg-white px-[21px] py-3 hover:bg-white/50"
-                onClick={() => router.push("/product-id")}
-              >
+              <button className="mx-auto flex items-center gap-[6px] rounded-full bg-white px-[21px] py-3 hover:bg-white/50">
                 <span className="text-sm font-semibold uppercase text-gray-900">Learn more</span>
                 <Image src={ArrowIcon} width={500} height={500} alt="arrow icon" className="size-5" />
               </button>
