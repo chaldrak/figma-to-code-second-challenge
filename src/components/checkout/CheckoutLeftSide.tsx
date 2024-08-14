@@ -43,11 +43,11 @@ const CheckoutLeftSide = () => {
             <input
               type="text"
               placeholder="Add discount code"
-              className="placeholder:text-medium w-full rounded-full border border-gray-900 bg-white p-[14px] placeholder:text-xs placeholder:text-gray-900 md:w-1/2"
+              className="placeholder:text-medium w-full rounded-full border border-gray-900 bg-white p-3.5 placeholder:text-xs placeholder:text-gray-900 md:w-1/2"
             />
             <BaseButton
               title="Apply"
-              className="inline-block w-fit bg-gray-900 px-5 py-[14px] font-semibold text-white"
+              className="inline-block w-fit bg-gray-900 px-5 py-3.5 font-semibold text-white"
               submit={() => null}
             />
           </div>
@@ -75,9 +75,9 @@ const CheckoutLeftSide = () => {
           </p>
         </div>
 
-        <div className="mt-6 space-y-[14px]">
+        <div className="mt-6 space-y-3.5">
           <h3 className="text-sm font-semibold text-gray-900">Shipping method</h3>
-          <div className="mt-[14px] space-y-4">
+          <div className="mt-3.5 space-y-4">
             {shippings.map((item) => (
               <BaseRadio
                 mode="shipping"

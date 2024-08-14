@@ -10,7 +10,7 @@ const BaseItem = () => {
           width={500}
           height={500}
           alt=""
-          className="size-11 rounded-lg object-cover md:size-[70px] lg:size-[72px]"
+          className="lg:size-18 size-11 rounded-lg object-cover md:size-[70px]"
         />
         <p className="">
           <span className="block text-xs font-semibold text-gray-900 md:text-sm">T-Shirt</span>

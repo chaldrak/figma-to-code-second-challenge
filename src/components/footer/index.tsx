@@ -6,7 +6,7 @@ import { footerMenu } from "@/constants/navigations"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 py-[26px] text-white lg:py-[52px]">
-      <div className="mx-5 h-fit max-w-7xl md:mx-[46px] lg:mx-auto">
+      <div className="mx-5 h-fit max-w-7xl md:mx-11.5 lg:mx-auto">
         <div className="flex flex-col items-start justify-between lg:flex-row">
           <div className="lg:w-1/3">
             <Link href="/" className="text-black">
@@ -21,7 +21,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="Your email"
-                className="w-full rounded-full border border-white bg-transparent p-[14px] placeholder:text-xs placeholder:text-white"
+                className="w-full rounded-full border border-white bg-transparent p-3.5 placeholder:text-xs placeholder:text-white"
               />
               <button className="rounded-full bg-white px-[33px] py-3 text-sm font-semibold text-gray-900">
                 Subscribe

@@ -7,7 +7,7 @@ import ArrowIcon from "@/assets/icons/arrow.svg"
 
 const OurCollection = () => {
   return (
-    <section className="mt-[72px]">
+    <section className="mt-18">
       <h3 className="pb-1 text-center font-chillax text-2xl font-semibold uppercase text-gray-900 md:text-3xl lg:text-4xl">
         OUR COLLECTION
       </h3>

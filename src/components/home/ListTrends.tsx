@@ -5,7 +5,7 @@ import CardTrend from "./CardTrend"
 const ListTrends = () => {
   return (
     <>
-      <div className="grid h-fit w-full grid-cols-1 gap-[14px] px-2 md:grid-cols-2 lg:grid-cols-3 lg:px-[102px]">
+      <div className="grid h-fit w-full grid-cols-1 gap-3.5 px-2 md:grid-cols-2 lg:grid-cols-3 lg:px-[102px]">
         {Array(6)
           .fill(0)
           .map((item, idx) => (

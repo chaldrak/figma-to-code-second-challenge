@@ -17,7 +17,7 @@ const Categories = ({ category, setCategory }: ICategoriesProps) => {
         <button
           key={idx}
           className={clsx(
-            "mr-[10px] space-x-2 rounded-full border border-gray-900 px-[14px] py-[10px] font-medium transition-colors duration-500",
+            "mr-[10px] space-x-2 rounded-full border border-gray-900 px-3.5 py-[10px] font-medium transition-colors duration-500",
             item.value === category ? "bg-gray-900 text-white" : "bg-white hover:bg-gray-900 hover:text-white"
           )}
           type="button"

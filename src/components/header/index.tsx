@@ -19,8 +19,8 @@ const Header = () => {
   }, [open])
 
   return (
-    <nav className="relative z-50 h-[76px] bg-white">
-      <div className="mx-5 hidden h-full max-w-7xl items-center justify-between border-b border-gray-100 md:mx-[46px] lg:mx-auto lg:flex">
+    <nav className="relative z-50 h-19 bg-white">
+      <div className="mx-5 hidden h-full max-w-7xl items-center justify-between border-b border-gray-100 md:mx-11.5 lg:mx-auto lg:flex">
         <ul className="flex items-center gap-[18px]">
           {headerMenu.slice(0, 4).map((item, idx) => (
             <li key={idx}>
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div className="z-50 size-full lg:hidden">
-        <div className="mx-5 flex h-full items-center justify-between border-b border-gray-100 md:mx-[46px]">
+        <div className="mx-5 flex h-full items-center justify-between border-b border-gray-100 md:mx-11.5">
           {/* Hamburger */}
           <button className="flex w-fit flex-col space-y-2 p-2" type="button" onClick={() => setOpen((v) => !v)}>
             <Image
@@ -115,7 +115,7 @@ const Header = () => {
       {/* Menu mobile */}
       <div
         className={clsx(
-          "absolute left-0 top-[76px] flex w-full flex-col items-center bg-white py-[18px] text-center transition-all ease-in-out",
+          "absolute left-0 top-19 flex w-full flex-col items-center bg-white py-[18px] text-center transition-all ease-in-out",
           open ? "min-h-screen lg:hidden" : "hidden"
         )}
       >

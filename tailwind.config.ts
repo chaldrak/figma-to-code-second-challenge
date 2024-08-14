@@ -28,6 +28,12 @@ const config: Config = {
       rotate: {
         custom: "24deg",
       },
+      spacing: {
+        3.5: "14px",
+        11.5: "46px",
+        18: "72px",
+        19: "76px",
+      },
     },
   },
   plugins: [

@@ -43,7 +43,7 @@ const CartDetails = () => {
                       width={500}
                       height={500}
                       alt=""
-                      className="size-[45px] shrink-0 rounded-lg object-cover md:size-[70px] lg:size-[72px]"
+                      className="lg:size-18 size-[45px] shrink-0 rounded-lg object-cover md:size-[70px]"
                     />
                     <div className="w-2/3 md:w-full md:space-y-1">
                       <span className="block truncate whitespace-nowrap text-xs font-semibold text-gray-900 md:text-sm">

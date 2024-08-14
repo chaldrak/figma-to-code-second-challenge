@@ -56,7 +56,7 @@ const ProductDetails = () => {
 
         <div>
           <p className="text-xl font-medium md:text-3xl">Color:{color.label}</p>
-          <div className="mt-[14px] space-x-3">
+          <div className="mt-3.5 space-x-3">
             {colors.map((item, idx) => (
               <ButtonColor color={color} item={item} key={idx} setColor={setColor} />
             ))}
@@ -65,14 +65,14 @@ const ProductDetails = () => {
 
         <div>
           <h3 className="text-3xl font-medium">Size:</h3>
-          <div className="mt-[14px] space-x-3">
+          <div className="mt-3.5 space-x-3">
             {["xs", "s", "m", "l", "xl"].map((item, idx) => (
               <ButtonSize item={item} setSize={setSize} size={size} key={idx} />
             ))}
           </div>
         </div>
 
-        <div className="flex items-center gap-[14px]">
+        <div className="flex items-center gap-3.5">
           <BaseButton
             submit={() => null}
             title="Buy now"
@@ -88,7 +88,7 @@ const ProductDetails = () => {
 
         <div>
           <h3 className="font-chillax text-2xl font-medium md:text-3xl">Description</h3>
-          <p className="mt-[14px] text-sm text-gray-300 md:text-lg">
+          <p className="mt-3.5 text-sm text-gray-300 md:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
             odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             Curabitur tempus urna at turpis condimentum lobortis.

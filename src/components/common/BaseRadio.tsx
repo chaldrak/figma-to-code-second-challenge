@@ -36,7 +36,7 @@ const BaseRadio = ({ label, mode, icon, value, onChange, description, price }: B
       onClick={() => onChange(label)}
     >
       <div className="flex items-center gap-3">
-        <div className="flex size-[14px] shrink-0 items-center justify-center rounded-full border md:size-5">
+        <div className="flex size-3.5 shrink-0 items-center justify-center rounded-full border md:size-5">
           <div className={clsx("size-2 rounded-full md:size-3", label === value ? "bg-gray-900" : "bg-white")}></div>
         </div>
         <div>
